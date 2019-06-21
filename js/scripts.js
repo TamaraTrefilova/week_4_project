@@ -94,7 +94,7 @@ var pizza = new Pizza();
 var address = "";
 
 function attachListeners() {
-  $("#deleteButton").click(function() {
+  $("#confirmButton").click(function() {
     $("#order_details").remove();
     $("#submit_btn").hide("hide");
     $("#buttons").remove();
@@ -106,7 +106,14 @@ function attachListeners() {
     $("#submit_btn").hide("hide");
     $("#buttons").remove();
     $("#remove_order_message").fadeIn();
-    $("form#orderForm")[0].reset();
+      $("#remove_order_message").fadeOut(1000);
+    $("#resetButton").fadeIn(2000);
+    // $("form#orderForm")[0].reset();
+  });
+  $("#resetButton").click(function() {
+    $("#resetButton").hide("hide");
+    $("#submit_btn").show();
+    // $("#selection_row").show();    
   });
 };
 
