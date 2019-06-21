@@ -54,30 +54,49 @@
             </div>
           </div>
         </div>
-        <div class="secetion_row">
+        <div id="selection_row" class="row">
           <div class="col">
             <div id="pizza_size">
-              <label for="size">Select size</label><br>
-              <input type="checkbox" value="size">Small <br>
-              <input type="checkbox" value="size">Medium <br>
-              <input type="checkbox" value="size">Large <br>
-              <input type="checkbox" value="size">X-Large <br>
-            </div>
-          </div>
-          <div class="col">
-            <div id="topping">
-              <label for="topping">Select topping</label><br>
-              <input type="checkbox" value="topping"> Cheese <br>
-              <input type="checkbox" value="topping"> Pepperoni <br>
-              <input type="checkbox" value="topping"> Artichoke <br>
-              <input type="checkbox" value="topping"> Anchovy <br>
-              <input type="checkbox" value="topping"> Mushrooms <br>
-              <input type="checkbox" value="topping"> Bacon <br>
-              <input type="checkbox" value="topping"> Onions <br>
+              <label for="size">Select size:</label><br>
+              <div class="radio success">
+                <label>
+                  <input type="radio" name="size" value="small">
+                  Small
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="medium">
+                  Medium
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="large">
+                  Large
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="x-large">
+                  X-Large
+                </label>
+              </div>
             </div>
           </div>
         </div>
-
+        <div id="select_topping" class="col">
+          <label for="topping">Select topping:</label><br>
+          <label><input type="checkbox" name="topping" value="Cheese"> Cheese </label>
+          <label><input type="checkbox" name="topping" value="Pepperoni"> Pepperoni</label>
+          <label><input type="checkbox" name="topping" value="Artichoke"> Artichoke</label>
+          <label><input type="checkbox" name="topping" value="Artichoke"> Artichoke</label>
+          <label><input type="checkbox" name="topping" value="Anchovy"> Anchovy</label>
+          <label><input type="checkbox" name="topping" value="Mushrooms"> Mushrooms</label>
+          <label><input type="checkbox" name="topping" value="Bacon"> Bacon</label>
+          <label><input type="checkbox" name="topping" value="Onions">
+            Onions</label>
+        </div>
 
         <button type="submit">Submit your order</button>
       </div>

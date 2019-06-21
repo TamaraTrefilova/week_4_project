@@ -5,7 +5,7 @@ function Pizza() {
   this.price = 0;
 }
 
-Pizza.prototype.setPizza = function (size, type, topping) {
+Pizza.prototype.setPizza = function(size, type, topping) {
   this.size = size;
   this.toppings.push(topping);
   this.type = type;
@@ -18,7 +18,7 @@ function Order(customer) {
   this.orderTotal = 0;
 }
 
-Order.prototype.countTotal = function(){
+Order.prototype.countTotal = function() {
   var pizzaTotal = 0;
   pizzas.forEach(function(pizza) {
     pizzaTotal += pizza.price;
@@ -50,8 +50,9 @@ Customer.prototype.addAddress = function(address) {
 
 var pizza = new Pizza();
 var address = "";
+
 function attachListeners() {
-  $("input#delivery").click(function(){
+  $("input#delivery").click(function() {
     $("#addressRow").fadeIn();
     var inputtedAddress = $("input#physical-address").val();
   });
@@ -64,16 +65,30 @@ $(function() {
     event.preventDefault();
     attachListeners();
     debugger;
+
     var inputtedFirstName = $("input#first-name").val();
     var inputtedLastName = $("input#last-name").val();
     var inputtedPhoneNumber = $("input#phone-number").val();
-    var deliveryType = $("input[type='checkbox']:checked").val();
+    var deliveryType = $("input#delivery[type='checkbox']:checked").val();
     var customer = new Customer(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
-    if(deliveryType){
-        var inputtedAddress = $("input#physical-address").val();
-        customer.addAddress(address);
+    if (deliveryType) {
+      var inputtedAddress = $("input#physical-address").val();
+      customer.addAddress(address);
     }
 
+    var size = $("#selection_row input:radio[name=size]:checked").val();
+    pizza.size = size;
+
+    // var check = $("input:checkbox[name='topping']:checked").val();
+    $.each($("#select_topping input:checkbox[name='topping']:checked"), function() {
+      var toppingsOrder = $(this).val();
+      pizza.toppings.push(toppingsOrder);
+    });
+
+    // $("label input:checkbox[name='topping']:checked").each(function() {
+    //   var toppingsOrder = $(this).val();
+    //   pizza.toppings.push(toppingsOrder);
+    // });
   });
 
 });
