@@ -19,10 +19,9 @@
 | * User should be able to select  different pizza's sizes: small, medium, large, and X-large |  "small"    |  "small"   |
 | * User should be able to select  different toppings: "cheese", "pepperoni", "artichoke", "anchovy", "mushrooms", "bacon", "onions" |  |    |
 | * User should be able to see a pizza's price.   |small - $4,  medium - 6$, large - $8, and X-large - $10 |  |  |
-| *  User should be able to see a topping's price. Every topping is $2  |  |    |    |
-| * User should be able to tip: 15%, 20%, 25%|    |     |   |
-| * User should be able to see a final  order amount |    |     |   |
-| *  |    |     |   |
+| *  User should be able to see a topping's price. Every topping is $2  |    |    
+| * User should be able to see a final  order amount |   
+| * User should be able to confirm or remove the order |
 
 
 
