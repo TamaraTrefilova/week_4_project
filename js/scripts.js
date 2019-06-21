@@ -5,7 +5,7 @@ function Pizza() {
   this.price = 0;
 }
 
-Pizza.prototype.setPizza(size, type, topping){
+Pizza.prototype.setPizza = function (size, type, topping) {
   this.size = size;
   this.toppings.push(topping);
   this.type = type;
@@ -18,19 +18,62 @@ function Order(customer) {
   this.orderTotal = 0;
 }
 
-Order.prototype.addPizza(pizza){
-   this.pizzas.push(addPizza);
+Order.prototype.countTotal = function(){
+  var pizzaTotal = 0;
+  pizzas.forEach(function(pizza) {
+    pizzaTotal += pizza.price;
+    pizza.toppings.forEach(function(topping) {
+      pizzaTotal++;
+    });
+  });
+  return this.orderTotal = pizzaTotal;
 }
 
-function Customer(name) {
-  this.name = name;
+Order.prototype.addPizza = function(pizza) {
+  this.pizzas.push(addPizza);
+}
+
+function Customer(firstName, lastName, phone) {
+  this.firstName = firstName;
+  this.lastName = lastName;
   this.address = "";
-  this.phone = "";
-  this.delivery = false;
+  this.phone = phone;
 }
 
-
-Customer.prototype.setDelivery(){
-  this.delivery = true;
+Customer.prototype.addAddress = function(address) {
+  this.address = address;
 }
+
+// Customer.prototype.setDelivery = function() {
+//   this.delivery = true;
+// }
+
 var pizza = new Pizza();
+var address = "";
+function attachListeners() {
+  $("input#delivery").click(function(){
+    $("#addressRow").fadeIn();
+    var inputtedAddress = $("input#physical-address").val();
+  });
+};
+
+$(function() {
+  attachListeners()
+
+  $("form#orderForm").submit(function(event) {
+    event.preventDefault();
+    attachListeners();
+    debugger;
+    var inputtedFirstName = $("input#first-name").val();
+    var inputtedLastName = $("input#last-name").val();
+    var inputtedPhoneNumber = $("input#phone-number").val();
+    var deliveryType = $("input[type='checkbox']:checked").val();
+    var customer = new Customer(inputtedFirstName, inputtedLastName, inputtedPhoneNumber);
+    if(deliveryType){
+        var inputtedAddress = $("input#physical-address").val();
+        customer.addAddress(address);
+    }
+
+  });
+
+});
