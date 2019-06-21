@@ -99,12 +99,14 @@ function attachListeners() {
     $("#submit_btn").hide("hide");
     $("#buttons").remove();
     $("#success_message").fadeIn();
+    $("form#orderForm")[0].reset();
   });
   $("#removeButton").click(function() {
     $("#order_details").remove();
     $("#submit_btn").hide("hide");
     $("#buttons").remove();
     $("#remove_order_message").fadeIn();
+    $("form#orderForm")[0].reset();
   });
 };
 
@@ -113,8 +115,6 @@ $(function() {
 
   $("form#orderForm").submit(function(event) {
     event.preventDefault();
-    // attachListeners();
-    // debugger;
 
     var inputtedFirstName = $("input#first-name").val();
     var inputtedLastName = $("input#last-name").val();
@@ -141,11 +141,11 @@ $(function() {
     var order = new Order(customer);
     order.addPizza(pizza);
     var total = order.countTotal();
+    $("#selection_row").fadeOut();
+    $("#submit_btn").remove();
     $("#order_details").html(" Your order: <br>" + order.printOrder());
     $("#order_details").fadeIn();
     $("#buttons").fadeIn();
-
-      $("form#orderForm")[0].reset();
   });
 
 });

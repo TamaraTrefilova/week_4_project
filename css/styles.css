@@ -1,3 +1,84 @@
 #success_message,  #buttons, #remove_order_message{
   display: none;
 }
+
+
+.jumbotron {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: none !important;
+  color: #d10c0c;
+  text-shadow: 2px 2px 3px black;
+  opacity: 0.9;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+
+body {
+  background-image: url("https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1395024/910/618/m2/fpnw/wm1/mto4z4y0xaenpk1dhuer2vowgbwfh64s7vk8ev32hzeha0dmfjcigtzvxfredgxw-.jpg?1466765774&s=fa54455928e262b4228ebc8e463ed363");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  min-height: 100%;
+  background-position: center;
+  overflow: hidden;
+  font-size: 30px;
+  color: white;
+}
+
+#customerRow{
+  font-size: 40px;
+  color: white;
+ font-weight: bolder;
+}
+
+#submit_btn{
+margin-top: 25px;
+ font-size: 25px;
+ text-align: center;
+ color: black;
+ text-shadow: 1px 1px 2px grey;
+ border-radius: 5px;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+#order_details, #success_message, #remove_order_message{
+  margin-top: 25px;
+  font-size: 40px;
+  text-align: center;
+  color: black;
+  text-shadow: 1px 1px 2px grey;
+  border: 0px solid black;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#deleteButton, #removeButton, #submit_btn{
+  margin-top: 25px;
+  font-size: 30px;
+  text-align: center;
+  color: black;
+  text-shadow: 1px 1px 2px grey;
+  border: 0px solid black;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  width: 20vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#delivery{
+  margin-top: 60px;
+}
+
+input#delivery[type="checkbox"] {
+  transform:scale(2, 2);
+  margin-left: auto;
+  margin-right: auto;
+}
