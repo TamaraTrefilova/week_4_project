@@ -84,21 +84,29 @@
               </div>
             </div>
           </div>
+          <div class="col">
+            <div id="select_topping" class="col">
+              <label for="topping">Select topping:</label><br>
+              <input type="checkbox" name="topping" value="Cheese"> Cheese  <br>
+              <input type="checkbox" name="topping" value="Pepperoni"> Pepperoni <br>
+              <input type="checkbox" name="topping" value="Artichoke"> Artichoke <br>
+              <input type="checkbox" name="topping" value="Anchovy"> Anchovy <br>
+              <input type="checkbox" name="topping" value="Mushrooms"> Mushrooms <br>
+              <input type="checkbox" name="topping" value="Bacon"> Bacon <br>
+              <input type="checkbox" name="topping" value="Onions">
+              Onions <br>
+            </div>
+          </div>
         </div>
-        <div id="select_topping" class="col">
-          <label for="topping">Select topping:</label><br>
-          <label><input type="checkbox" name="topping" value="Cheese"> Cheese </label>
-          <label><input type="checkbox" name="topping" value="Pepperoni"> Pepperoni</label>
-          <label><input type="checkbox" name="topping" value="Artichoke"> Artichoke</label>
-          <label><input type="checkbox" name="topping" value="Artichoke"> Artichoke</label>
-          <label><input type="checkbox" name="topping" value="Anchovy"> Anchovy</label>
-          <label><input type="checkbox" name="topping" value="Mushrooms"> Mushrooms</label>
-          <label><input type="checkbox" name="topping" value="Bacon"> Bacon</label>
-          <label><input type="checkbox" name="topping" value="Onions">
-            Onions</label>
-        </div>
-
         <button type="submit">Submit your order</button>
+      </div>
+      <div id="order_details">
+
+
+      <button id="confirm" type="button">Confirm your order</button>
+      </div>
+      <div id="success_message">
+        Thank you for your order!
       </div>
     </form>
   </div>
