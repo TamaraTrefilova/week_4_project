@@ -1,4 +1,4 @@
-#success_message,  #buttons, #remove_order_message, #resetButton{
+#success_message,  #buttons, #remove_order_message{
   display: none;
 }
 
@@ -60,7 +60,7 @@ margin-top: 25px;
   margin-right: auto;
 }
 
-#deleteButton, #removeButton, #submit_btn, #resetButton{
+#confirmButton, #removeButton, #submit_btn{
   margin-top: 25px;
   font-size: 30px;
   text-align: center;

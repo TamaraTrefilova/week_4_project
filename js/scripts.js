@@ -99,6 +99,7 @@ function attachListeners() {
     $("#submit_btn").hide("hide");
     $("#buttons").remove();
     $("#success_message").fadeIn();
+    $("#success_message").fadeOut(2000);
     $("form#orderForm")[0].reset();
   });
   $("#removeButton").click(function() {
@@ -106,15 +107,14 @@ function attachListeners() {
     $("#submit_btn").hide("hide");
     $("#buttons").remove();
     $("#remove_order_message").fadeIn();
-      $("#remove_order_message").fadeOut(1000);
-    $("#resetButton").fadeIn(2000);
-    // $("form#orderForm")[0].reset();
+    $("#remove_order_message").fadeOut(2000);
+    $("form#orderForm")[0].reset();
   });
-  $("#resetButton").click(function() {
-    $("#resetButton").hide("hide");
-    $("#submit_btn").show();
-    // $("#selection_row").show();    
-  });
+  // $("#resetButton").click(function() {
+  //   $("#resetButton").hide("hide");
+  //   $("#submit_btn").show();
+  //   // $("#selection_row").show();
+  // });
 };
 
 $(function() {
